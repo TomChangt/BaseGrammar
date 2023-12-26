@@ -3,4 +3,6 @@ project(BaseGrammar C)
 
 set(CMAKE_C_STANDARD 11)
 
-add_executable(BaseGrammar BaseGrammar.c)
+add_executable(BaseGrammar BaseGrammar.c
+        TypingGame.c
+        TypingGame.h)
