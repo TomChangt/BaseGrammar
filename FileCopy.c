@@ -20,10 +20,9 @@ void copyFile(const char *sourceFileName, const char *targetFileName) {
         fclose(sourceFile);
         exit(EXIT_FAILURE);
     }
-    char buffer[10];
+    char buffer[1024];
 
     while (fgets(buffer, sizeof(buffer), sourceFile) != NULL) {
-        printf("%s \n",buffer);
         fputs(buffer, targetFile);
     }
 
