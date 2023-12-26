@@ -5,4 +5,5 @@ set(CMAKE_C_STANDARD 11)
 
 add_executable(BaseGrammar BaseGrammar.c
         TypingGame.c
-        TypingGame.h)
+        TypingGame.h
+        FileCopy.c)
