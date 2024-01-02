@@ -7,4 +7,5 @@ add_executable(BaseGrammar BaseGrammar.c
         TypingGame.c
         TypingGame.h
         FileCopy.c
-        Calculate.c)
+        Calculate.c
+        WordTranslator.c)

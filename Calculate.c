@@ -6,12 +6,12 @@
 #include <stdlib.h>
 #include <time.h>
 
-#define FILEPATH "Calculate.txt"
-#define MAXLINE 20
-#define RANDNUM 1000
+#define FILE_PATH "Calculate.txt"
+#define MAX_LINE 20
+#define RAND_NUM 1000
 
-FILE *operationFile(char *mode) {
-    FILE *fileData = fopen(FILEPATH, mode);
+FILE *operation_file(char *mode) {
+    FILE *fileData = fopen(FILE_PATH, mode);
     if (fileData == NULL) {
         perror("open source file error: ");
         exit(EXIT_FAILURE);
@@ -41,17 +41,17 @@ float calculateResult(float a, float b, char c) {
 
 void initData() {
     srand((unsigned int) time(NULL)); // 初始化随机数生成器
-    FILE *fileData = operationFile("w");
+    FILE *fileData = operation_file("w");
     if (fileData == NULL) {
         perror("open file error: ");
         exit(EXIT_FAILURE);
     }
 
     char buffer[128] = "";
-    for (int i = 0; i < MAXLINE; ++i) {
+    for (int i = 0; i < MAX_LINE; ++i) {
         char operator = '+';
-        int a = rand() % RANDNUM + 1;
-        int b = rand() % RANDNUM + 1;
+        int a = rand() % RAND_NUM + 1;
+        int b = rand() % RAND_NUM + 1;
         int c = rand() % 4;
         switch (c) {
             case 1:
@@ -72,14 +72,14 @@ void initData() {
 
 void calculateData() {
     //解析文件取出数据
-    FILE *fileData = operationFile("r");
+    FILE *fileData = operation_file("r");
     if (fileData == NULL) {
         perror("open file error: ");
         exit(EXIT_FAILURE);
     }
     char buffer[128];
     int i = 0;
-    char data[MAXLINE][128] = {0};
+    char data[MAX_LINE][128] = {0};
     while (fgets(buffer, sizeof(buffer), fileData) != NULL) {
         float a = 0;
         float b = 0;
@@ -87,12 +87,12 @@ void calculateData() {
         sscanf(buffer, "%f %c %f =\n", &a, &c, &b);
         //计算数据
         float rs = calculateResult(a, b, c);
-        sprintf(data[i++],"%.0f %c %.0f = %.2f\n", a, c, b,rs);
+        sprintf(data[i++], "%.0f %c %.0f = %.2f\n", a, c, b, rs);
     }
 
     fclose(fileData);
-    FILE *writeFile = operationFile("w");
-    for (int j = 0; j < MAXLINE; ++j) {
+    FILE *writeFile = operation_file("w");
+    for (int j = 0; j < MAX_LINE; ++j) {
         //保存进文件
         fputs(data[j], writeFile);
     }
