@@ -21,6 +21,7 @@ FILE *open_file() {
     return fileData;
 }
 
+
 int get_dict_count() {
     FILE *fp = open_file();
     char buffer[1024] = "";
