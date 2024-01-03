@@ -96,5 +96,5 @@ int main() {
             printf("翻译为：%s \n", content);
         }
     }
-
+    return 0;
 }
