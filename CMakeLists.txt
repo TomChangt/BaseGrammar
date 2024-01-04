@@ -9,4 +9,4 @@ add_executable(BaseGrammar BaseGrammar.c
         FileCopy.c
         Calculate.c
         WordTranslator.c
-        GluttonousSnake.c)
+)

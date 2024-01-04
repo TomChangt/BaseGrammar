@@ -41,10 +41,9 @@ void filter_buffer(char *buffer) {
     buffer[n + 1] = 0;
 }
 
-
 void init_dict(DICT **temp, int count) {
 
-    DICT *p = malloc(sizeof(DICT) * count);
+    DICT *p = (DICT *)malloc(sizeof(DICT) * count);
     FILE *fp = open_file();
     char buffer[1024] = "";
     int i = 0, line = 0;
