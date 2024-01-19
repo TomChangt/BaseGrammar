@@ -1,0 +1,10 @@
+#英雄Id
+heroId:1
+#英雄名称
+heroName:芈月
+#英雄攻击力
+heroAtk:1000
+#英雄防御力
+heroDef:9999
+#英雄信息
+heroInfo:老铁666

@@ -11,4 +11,7 @@ add_executable(BaseGrammar BaseGrammar.c
         WordTranslator.c
         Selectsort.c
         TwoLevelPointer.c
+        配置文件读写/Config.h
+        配置文件读写/Config.c
+        配置文件读写/ParsConfig.c
 )
