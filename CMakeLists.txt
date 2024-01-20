@@ -14,4 +14,7 @@ add_executable(BaseGrammar BaseGrammar.c
         配置文件读写/Config.h
         配置文件读写/Config.c
         配置文件读写/ParsConfig.c
+        链表/LinkList.h
+        链表/LinkList.c
+        链表/OpLinkList.c
 )

@@ -1,0 +1,12 @@
+---
+triple:          'x86_64-apple-darwin'
+binary-path:     ParsConfig
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _isValidLine, symObjAddr: 0x0, symBinAddr: 0x100003860, symSize: 0x60 }
+  - { offsetInCU: 0x42, offset: 0x42, size: 0x8, addend: 0x0, symName: _isValidLine, symObjAddr: 0x0, symBinAddr: 0x100003860, symSize: 0x60 }
+  - { offsetInCU: 0x6A, offset: 0x6A, size: 0x8, addend: 0x0, symName: _getFileLine, symObjAddr: 0x60, symBinAddr: 0x1000038C0, symSize: 0x120 }
+  - { offsetInCU: 0xC0, offset: 0xC0, size: 0x8, addend: 0x0, symName: _parseFile, symObjAddr: 0x180, symBinAddr: 0x1000039E0, symSize: 0x2B0 }
+  - { offsetInCU: 0x15C, offset: 0x15C, size: 0x8, addend: 0x0, symName: _getInfoByKey, symObjAddr: 0x430, symBinAddr: 0x100003C90, symSize: 0x90 }
+  - { offsetInCU: 0x1BC, offset: 0x1BC, size: 0x8, addend: 0x0, symName: _freeSpace, symObjAddr: 0x4C0, symBinAddr: 0x100003D20, symSize: 0x30 }
+  - { offsetInCU: 0x1E0, offset: 0x1E0, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x4F0, symBinAddr: 0x100003D50, symSize: 0x11C }
+...
