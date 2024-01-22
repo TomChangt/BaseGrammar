@@ -35,7 +35,7 @@ struct LinkNode *initLinkList() {
     return pHead;
 }
 
-void foreachListList(struct LinkNode *pHead) {
+void foreachLinkList(struct LinkNode *pHead) {
 
     if (pHead == NULL) {
         return;
@@ -48,7 +48,7 @@ void foreachListList(struct LinkNode *pHead) {
     }
 }
 
-void insertListList(struct LinkNode *pHead, int oldVal, int newVal) {
+void insertLinkList(struct LinkNode *pHead, int oldVal, int newVal) {
 
     if (pHead == NULL) {
         return;
@@ -72,33 +72,33 @@ void insertListList(struct LinkNode *pHead, int oldVal, int newVal) {
 
 }
 
-void deleteListList(struct LinkNode *pHead, int delVal) {
+void deleteLinkList(struct LinkNode *pHead, int delVal) {
     if (pHead == NULL) {
         return;
     }
     struct LinkNode *pPrev = pHead;
     struct LinkNode *pCurrent = pHead->next;
 
-    while (pCurrent != NULL){
-        if(pCurrent->num == delVal){
+    while (pCurrent != NULL) {
+        if (pCurrent->num == delVal) {
             break;
         }
         pPrev = pCurrent;
         pCurrent = pCurrent->next;
     }
-    if(pCurrent != NULL){
+    if (pCurrent != NULL) {
         pPrev->next = pCurrent->next;
         free(pCurrent);
     }
 
 }
 
-void clearListList(struct LinkNode *pHead) {
+void clearLinkList(struct LinkNode *pHead) {
     if (pHead == NULL) {
         return;
     }
     struct LinkNode *pCurrent = pHead->next;
-    while (pCurrent != NULL){
+    while (pCurrent != NULL) {
         struct LinkNode *next = pCurrent->next;
         free(pCurrent);
         pCurrent = next;
@@ -106,10 +106,27 @@ void clearListList(struct LinkNode *pHead) {
     pHead->next = NULL;
 }
 
-void destroyListList(struct LinkNode *pHead) {
+void destroyLinkList(struct LinkNode *pHead) {
     if (pHead == NULL) {
         return;
     }
-    clearListList(pHead);
+    clearLinkList(pHead);
     pHead = NULL;
+}
+
+void reversedLinkList(struct LinkNode *pHead) {
+    if (pHead == NULL) {
+        return;
+    }
+    struct LinkNode *pCurrent = pHead->next;
+    struct LinkNode *pNext = NULL;
+    struct LinkNode *pPrev = NULL;
+    while (pCurrent != NULL) {
+        pNext = pCurrent->next;
+        pCurrent->next = pPrev;
+        pPrev = pCurrent;
+        pCurrent = pNext;
+    }
+
+    pHead->next = pPrev;
 }

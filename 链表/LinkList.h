@@ -16,15 +16,16 @@ struct LinkNode {
 
 struct LinkNode *initLinkList();
 
-void foreachListList(struct LinkNode *pHead);
+void foreachLinkList(struct LinkNode *pHead);
 
-void insertListList(struct LinkNode *pHead,int oldVal,int newVal);
+void insertLinkList(struct LinkNode *pHead,int oldVal,int newVal);
 
-void deleteListList(struct LinkNode *pHead,int delVal);
+void deleteLinkList(struct LinkNode *pHead,int delVal);
 
-void clearListList(struct LinkNode *pHead);
+void clearLinkList(struct LinkNode *pHead);
 
-void destroyListList(struct LinkNode *pHead);
+void destroyLinkList(struct LinkNode *pHead);
 
+void reversedLinkList(struct LinkNode *pHead);
 
 #endif //BASEGRAMMAR_LINKLIST_H
