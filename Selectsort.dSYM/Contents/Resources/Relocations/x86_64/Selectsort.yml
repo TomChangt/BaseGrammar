@@ -1,9 +1,0 @@
----
-triple:          'x86_64-apple-darwin'
-binary-path:     Selectsort
-relocations:
-  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _sortO1, symObjAddr: 0x0, symBinAddr: 0x100003C90, symSize: 0x100 }
-  - { offsetInCU: 0x41, offset: 0x41, size: 0x8, addend: 0x0, symName: _sortO1, symObjAddr: 0x0, symBinAddr: 0x100003C90, symSize: 0x100 }
-  - { offsetInCU: 0xC7, offset: 0xC7, size: 0x8, addend: 0x0, symName: _selectSort, symObjAddr: 0x100, symBinAddr: 0x100003D90, symSize: 0x130 }
-  - { offsetInCU: 0x14D, offset: 0x14D, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x230, symBinAddr: 0x100003EC0, symSize: 0xB1 }
-...
