@@ -4,19 +4,7 @@ project(BaseGrammar C)
 set(CMAKE_C_STANDARD 11)
 
 add_executable(BaseGrammar BaseGrammar.c
-        TypingGame.c
-        TypingGame.h
-        FileCopy.c
-        Calculate.c
-        WordTranslator.c
-        Selectsort.c
-        TwoLevelPointer.c
-        配置文件读写/Config.h
-        配置文件读写/Config.c
-        配置文件读写/ParsConfig.c
-        链表/LinkList.h
-        链表/LinkList.c
-        链表/OpLinkList.c
-        面向接口开发/InterfaceCodeMain.c
-        面向接口开发/InterfaceCode.c
+        动态数组/DynamicArray.c
+        动态数组/DynamicArray.h
+        动态数组/DynamicArrayMain.c
 )
