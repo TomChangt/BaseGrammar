@@ -3,8 +3,6 @@ project(BaseGrammar C)
 
 set(CMAKE_C_STANDARD 11)
 
-add_executable(BaseGrammar BaseGrammar/BaseGrammar.c
-        动态数组/DynamicArray.c
-        动态数组/DynamicArray.h
-        动态数组/DynamicArrayMain.c
+add_executable(BaseGrammar
+        单向链表传统版/LListMain.c
 )
