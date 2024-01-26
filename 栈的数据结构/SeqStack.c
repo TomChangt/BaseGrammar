@@ -6,7 +6,7 @@
 #include  <stdio.h>
 #include  <string.h>
 #include  <stdlib.h>
-#include "SeqStack.h"
+#include "Stack.h"
 #define MAX 1024
 
 struct SStack{
@@ -15,7 +15,7 @@ struct SStack{
 };
 
 //初始化栈
-SeqStack initSeqStack() {
+Stack initStack() {
     struct SStack *myStack = malloc(sizeof(struct SStack));
     if (myStack == NULL) {
         return NULL;
@@ -27,7 +27,7 @@ SeqStack initSeqStack() {
 }
 
 //入栈
-void pushSeqStack(SeqStack stack, void *data){
+void pushStack(Stack stack, void *data){
     if(stack == NULL){
         return;
     }
@@ -44,7 +44,7 @@ void pushSeqStack(SeqStack stack, void *data){
 }
 
 //出栈
-void popSeqStack(SeqStack stack){
+void popSeqStack(Stack stack){
     if(stack == NULL){
         return;
     }
@@ -57,7 +57,7 @@ void popSeqStack(SeqStack stack){
 }
 
 //返回栈顶
-void *topSeqStack(SeqStack stack){
+void *topStack(Stack stack){
     if(stack == NULL ){
         return NULL;
     }
@@ -69,7 +69,7 @@ void *topSeqStack(SeqStack stack){
 }
 
 //返回栈大小
-int sizeSeqStack(SeqStack stack){
+int sizeStack(Stack stack){
     if(stack == NULL ){
         return -1;
     }
@@ -78,7 +78,7 @@ int sizeSeqStack(SeqStack stack){
 }
 
 //判断栈是否为空
-int isEmptySeqStack(SeqStack stack){
+int isEmptyStack(Stack stack){
     if(stack == NULL ){
         return -1;
     }
@@ -87,7 +87,7 @@ int isEmptySeqStack(SeqStack stack){
 }
 
 //销毁释放
-void destroySeqStack(SeqStack stack){
+void destroyStack(Stack stack){
     if(stack == NULL ){
         return ;
     }

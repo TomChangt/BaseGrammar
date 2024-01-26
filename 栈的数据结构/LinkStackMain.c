@@ -6,23 +6,23 @@
 #include  <stdio.h>
 #include  <string.h>
 #include  <stdlib.h>
-#include "SeqStack.c"
+#include "LinkStack.c"
 
-struct Hero{
+struct Hero {
+    int *nodeAddr;
     char name[64];
     int age;
 };
 
 
 int main() {
-
     Stack  myStack = initStack();
-    struct Hero h1 = {"张飞",18};
-    struct Hero h2 = {"刘备",19};
-    struct Hero h3 = {"关羽",20};
-    struct Hero h4 = {"赵云",21};
-    struct Hero h5 = {"诸葛亮",22};
-    struct Hero h6 = {"黄忠",23};
+    struct Hero h1 = {NULL,"张飞", 18};
+    struct Hero h2 = {NULL,"刘备", 19};
+    struct Hero h3 = {NULL,"关羽", 20};
+    struct Hero h4 = {NULL,"赵云", 21};
+    struct Hero h5 = {NULL,"诸葛亮", 22};
+    struct Hero h6 = {NULL,"黄忠", 23};
     pushStack(myStack,&h1);
     pushStack(myStack,&h2);
     pushStack(myStack,&h3);
