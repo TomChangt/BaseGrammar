@@ -4,5 +4,8 @@ project(BaseGrammar C)
 set(CMAKE_C_STANDARD 11)
 
 add_executable(BaseGrammar
-        单向链表企业版/ELListMain.c
+        栈的数据结构/SeqStack.h
+        栈的数据结构/SeqStack.c
+        栈的数据结构/SeqStackMain.c
+
 )
