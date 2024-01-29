@@ -9,4 +9,6 @@ add_executable(BaseGrammar
         队列的数据结构/Queue.h
         队列的数据结构/SeqQueue.c
         队列的数据结构/SeqQueueMain.c
+        队列的数据结构/LinkQueue.c
+        队列的数据结构/LinkQueueMain.c
 )
